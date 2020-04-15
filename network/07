@@ -1,0 +1,2 @@
+nslookup slash16.org 8.8.8.8
+#host $(nslookup $(nslookup -querytype=soa slash16.org | egrep -m1 'origin' | cut -d' ' -f 3) | egrep -i 'address' | sed '1d' | cut -d' ' -f2)

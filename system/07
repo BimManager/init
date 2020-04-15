@@ -1,0 +1,1 @@
+systemctl status sshd | egrep -i 'pid:' | cut -d' ' -f4

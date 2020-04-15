@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#USER=$(whoami)
+if [[ $# -lt 1 ]]; then
+    echo usage: ./02 username
+    exit
+fi
+
+USER=$1 
+sudo kill -KILL $(pgrep -u $USER)
+sudo userdel -r -f $USER

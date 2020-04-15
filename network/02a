@@ -1,0 +1,1 @@
+ifconfig | egrep -m1 "broadcast" | awk -F' ' '{print $NF}'

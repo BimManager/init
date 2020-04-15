@@ -1,0 +1,1 @@
+ifconfig | egrep -A2 'en0' | egrep 'inet ' | cut -d' ' -f2
